@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XSunriseSunset.FiveDayForcast">
+    <ContentPage.Content>
+
+        <CollectionView x:Name="lstForcast" ItemsSource="{Binding DisplayWeather}" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid Padding="10" BackgroundColor="{Binding bgColor}">
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Row="1" Grid.ColumnSpan="3" Text="{Binding localDateTimeOffset}" />
+                        
+                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding min}" />
+                        <Label Grid.Row="2" Grid.Column="2" Text="{Binding max}" />
+                        <Label Grid.Row="2" Grid.Column="3" Text="{Binding humidity}" />
+                        
+                        <Label Grid.Row="3" Grid.Column="1" Text="{Binding windSpeed}" />
+                        <Label Grid.Row="3" Grid.Column="2" Text="{Binding windDirection}" />
+                        <Label Grid.Row="3" Grid.Column="3" Text="{Binding windGust}" />
+                        
+                        <Label Grid.Row="4" Grid.ColumnSpan="3" Text="{Binding desc}" />
+
+                    </Grid>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </ContentPage.Content>
+</ContentPage>

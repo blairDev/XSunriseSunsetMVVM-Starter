@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XSunriseSunset.Weather">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Aquamarine">
+
+            <Label x:Name="lblName" FontSize="Large" HorizontalOptions="CenterAndExpand" />
+            <Image x:Name="imageIcon" HeightRequest="70"></Image>
+            <Label x:Name="lblDesc" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblTemp" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblFeelLike" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblTempMax" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblTempMin" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblBarometricPressure" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblHumidity" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblWindSpeed" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblWindDegrees" HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="lblWindGust" HorizontalOptions="CenterAndExpand" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

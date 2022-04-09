@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XSunriseSunset.MainPage"
+             Title="Select a City">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add City" Clicked="btnAddCity_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout>
+    
+        <ListView x:Name="lstLocations" ItemTapped="lstLocations_ItemTapped" BackgroundColor="Lavender" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout Orientation="Horizontal">
+                                <Label Text="{Binding name}" Font="16" TextColor="Black"></Label>
+                                <Label Text="{Binding latitude}" TextColor="Black"></Label>
+                                <Label Text="{Binding longtitude}" TextColor="Black"></Label>
+                            </StackLayout>
+                           
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+        
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XSunriseSunset.AddCity">
+    <ContentPage.Content>
+        <StackLayout>
+            <Entry x:Name="efCityName" Placeholder="City Name" Keyboard="Default"></Entry>
+            <Picker x:Name="pkrState" Title="State" HorizontalOptions="FillAndExpand" />
+            <Picker x:Name="pkrCountry" Title="Country" HorizontalOptions="FillAndExpand">
+                <Picker.Items>
+                    <x:String>United States US</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button x:Name="btnSubmit" Text="Enter" Clicked="btnSubmit_Clicked"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
